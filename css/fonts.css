@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Golos Text';
+    src: url('../assets/fonts/Golos_Text/GolosText-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../assets/fonts/Merriweather/Merriweather-VariableFont_opsz,wdth,wght.ttf') format('truetype');
+    font-weight: 300 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../assets/fonts/Merriweather/Merriweather-Italic-VariableFont_opsz,wdth,wght.ttf') format('truetype');
+    font-weight: 300 900;
+    font-style: italic;
+    font-display: swap;
+}
