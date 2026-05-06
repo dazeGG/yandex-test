@@ -24,10 +24,25 @@ h3 {
 .hero {
     padding-top: 26px;
     position: relative;
+    background-color: #E9DED4;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../assets/images/hero-texture.jpg');
+    background-size: cover;
+    mix-blend-mode: color-burn;
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 2;
 }
 
 .hero__container {
+    position: relative;
     height: 700px;
+    z-index: 3;
 }
 
 .hero__decoration {
@@ -36,6 +51,7 @@ h3 {
     top: 0;
     left: 0;
     object-fit: cover;
+    z-index: 1;
 }
 
 .hero__logo {
