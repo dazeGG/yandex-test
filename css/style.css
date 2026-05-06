@@ -1,5 +1,13 @@
+:root {
+    --transition: 100ms ease-in-out;
+}
+
 body {
     font-family: 'Golos Text', sans-serif;
+    color: #313131;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.2;
 }
 
 h1,
@@ -8,12 +16,77 @@ h3 {
     font-family: 'Merriweather', serif;
 }
 
-.headline {
+.container {
+    max-width: 1222px;
+    margin: 0 auto;
+}
+
+.hero {}
+
+.hero__logo {
+    margin-top: 26px;
+}
+
+.hero__content {
+    max-width: 542px;
+    margin-top: 62px;
+}
+
+.hero__headline {
+    text-transform: uppercase;
+    font-weight: 400;
     font-size: 60px;
     line-height: 1.1;
 }
 
-.container {
-    max-width: 1222px;
-    margin: 0 auto;
+.hero__headline--center {
+    display: block;
+    text-align: center;
+}
+
+.hero__description {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.hero__buttons {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+}
+
+.hero__button {
+    height: 72px;
+    padding: 0 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.3;
+    text-align: center;
+    border-radius: 66px;
+    transition: background-color var(--transition), color var(--transition);
+}
+
+.hero__button--primary {
+    background: #1F1F1F;
+    color: #FFFFFF;
+}
+
+.hero__button--primary:hover {
+    background: #FBCE51;
+    color: #1F1F1F;
+}
+
+.hero__button--outline {
+    border: 2px solid #1F1F1F;
+}
+
+.hero__button--outline:hover {
+    background: #1F1F1F;
+    color: #FFFFFF;
 }
