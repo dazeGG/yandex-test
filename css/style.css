@@ -164,12 +164,12 @@ a {
     align-items: center;
 }
 
-.events__lecture-text {
+.events__title {
     font-size: 36px;
     line-height: 1.35;
 }
 
-.events__lecture-text--red {
+.events__title--red {
     font-weight: 600;
     color: #F54932;
 }
@@ -188,16 +188,6 @@ a {
 .events__seance-collage {
     display: block;
     width: 529px;
-}
-
-.events__seance-text {
-    font-size: 36px;
-    line-height: 1.35;
-}
-
-.events__seance-text--red {
-    font-weight: 600;
-    color: #F54932;
 }
 
 .events__seance-details {
@@ -253,4 +243,5 @@ a {
 
 .events__seance-contact {
     margin-top: 48px;
+    display: block;
 }
