@@ -21,10 +21,24 @@ h3 {
     margin: 0 auto;
 }
 
-.hero {}
+.hero {
+    padding-top: 26px;
+    position: relative;
+}
+
+.hero__container {
+    height: 700px;
+}
+
+.hero__decoration {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
 
 .hero__logo {
-    margin-top: 26px;
 }
 
 .hero__content {
