@@ -10,15 +10,21 @@ body {
     line-height: 1.2;
 }
 
-h1,
-h2,
-h3 {
-    font-family: 'Merriweather', serif;
+a {
+    color: #3057A2;
 }
 
 .container {
     max-width: 1222px;
     margin: 0 auto;
+}
+
+.font-serif {
+    font-family: 'Merriweather', serif;
+}
+
+.uppercase {
+    text-transform: uppercase;
 }
 
 /* HERO */
@@ -33,7 +39,7 @@ h3 {
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url('../assets/images/hero-texture.jpg');
+    background-image: url('../assets/images/hero-texture.webp');
     background-size: cover;
     mix-blend-mode: color-burn;
     opacity: 0.6;
@@ -56,16 +62,12 @@ h3 {
     z-index: 1;
 }
 
-.hero__logo {
-}
-
 .hero__content {
     max-width: 542px;
     margin-top: 62px;
 }
 
 .hero__headline {
-    text-transform: uppercase;
     font-weight: 400;
     font-size: 60px;
     line-height: 1.1;
@@ -137,11 +139,9 @@ h3 {
 
 .marquee {
     padding: 18px;
-    font-family: 'Merriweather', serif;
     font-size: 22px;
     line-height: 1.1;
     overflow: hidden;
-    text-transform: uppercase;
     background-color: #F54932;
     color: #FFFFFF;
 }
@@ -150,4 +150,107 @@ h3 {
     display: inline-flex;
     white-space: nowrap;
     animation: marquee 20s linear infinite;
+}
+
+/* EVENTS */
+
+.events {
+    margin-top: 80px;
+}
+
+.events__lecture {
+    display: flex;
+    column-gap: 64px;
+    align-items: center;
+}
+
+.events__lecture-text {
+    font-size: 36px;
+    line-height: 1.35;
+}
+
+.events__lecture-text--red {
+    font-weight: 600;
+    color: #F54932;
+}
+
+.events__seance {
+    margin-top: 64px;
+    display: flex;
+    column-gap: 44px;
+}
+
+.events__seance-collage-container {
+    flex-shrink: 0;
+    margin: -28px -28px -13px;
+}
+
+.events__seance-collage {
+    display: block;
+    width: 529px;
+}
+
+.events__seance-text {
+    font-size: 36px;
+    line-height: 1.35;
+}
+
+.events__seance-text--red {
+    font-weight: 600;
+    color: #F54932;
+}
+
+.events__seance-details {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+}
+
+.events__seance-details dt {
+    opacity: 0.7;
+    padding: 16px 16px 16px 0;
+    border-bottom: 2px solid #D0D0D0;
+}
+
+.events__seance-details dd {
+    font-weight: 500;
+    padding: 16px 0 16px 16px;
+    border-bottom: 2px solid #D0D0D0;
+    border-left: 2px solid #D0D0D0;
+}
+
+.events__seance-details dt:first-of-type,
+.events__seance-details dd:first-of-type {
+    padding-top: 0;
+}
+
+.events__seance-details dt:last-of-type,
+.events__seance-details dd:last-of-type {
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.events__seance-details-price {
+    display: flex;
+    column-gap: 12px;
+}
+
+.events__seance-details-price--old {
+    position: relative;
+    display: inline-block;
+}
+
+.events__seance-details-price--old::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: 2px;
+    background: #F54932;
+    border-radius: 66px;
+}
+
+.events__seance-contact {
+    margin-top: 48px;
 }
