@@ -7,19 +7,28 @@ const navCurrent = document.querySelector('.participants__nav-content-current')
 const navTotal = document.querySelector('.participants__nav-content-total')
 
 const TOTAL = items.length
-const VISIBLE = 3
-const CLONED_TOTAL = TOTAL + VISIBLE * 2
+
+const getVisible = () => window.matchMedia('(max-width: 768px)').matches ? 1 : 3
+
+let VISIBLE = getVisible()
+let CLONED_TOTAL = TOTAL + VISIBLE * 2
 
 let currentIndex = VISIBLE
 let slideWidth = items[0].offsetWidth + 20
 let autoplayInterval = null
 let isTransitioning = false
 
+const getLogicalIndex = () => ((currentIndex - VISIBLE) % TOTAL + TOTAL) % TOTAL
+
+const updateCounter = () => {
+    navCurrent.textContent = ((getLogicalIndex() + VISIBLE - 1) % TOTAL + 1).toString()
+}
+
 const goTo = (index, animated = true) => {
     currentIndex = index
     track.style.transition = animated ? 'transform var(--transition)' : 'none'
     track.style.transform = `translateX(-${currentIndex * slideWidth}px)`
-    navCurrent.textContent = (((currentIndex - 1 + TOTAL) % TOTAL) + 1).toString()
+    updateCounter()
 }
 
 track.addEventListener('transitionend', () => {
@@ -29,7 +38,7 @@ track.addEventListener('transitionend', () => {
         currentIndex += TOTAL
         track.style.transform = `translateX(-${currentIndex * slideWidth}px)`
         track.offsetHeight
-        navCurrent.textContent = (((currentIndex - 1 + TOTAL) % TOTAL) + 1).toString()
+        updateCounter()
     }
 
     // Если ушли в клоны справа — прыгаем на оригиналы слева
@@ -38,7 +47,7 @@ track.addEventListener('transitionend', () => {
         currentIndex -= TOTAL
         track.style.transform = `translateX(-${currentIndex * slideWidth}px)`
         track.offsetHeight
-        navCurrent.textContent = (((currentIndex - 1 + TOTAL) % TOTAL) + 1).toString()
+        updateCounter()
     }
 
     isTransitioning = false
@@ -60,13 +69,23 @@ const recountSlideWidth = () => {
     slideWidth = items[0].offsetWidth + 20
 }
 
-const init = () => {
+const setupClones = () => {
+    const originals = new Set(items)
+    const allChildren = [...track.children]
+
+    allChildren.forEach(child => {
+        if (!originals.has(child)) child.remove()
+    })
+
     const firstItems = [...items].slice(0, VISIBLE)
     const lastItems = [...items].slice(TOTAL - VISIBLE)
 
     lastItems.forEach(item => track.insertBefore(item.cloneNode(true), track.firstChild))
     firstItems.forEach(item => track.appendChild(item.cloneNode(true)))
+}
 
+const init = () => {
+    setupClones()
     navTotal.textContent = TOTAL.toString()
     goTo(currentIndex, false)
     autoplayInterval = setInterval(goNext, 4000)
@@ -83,6 +102,16 @@ navButtonNext.addEventListener('click', () => {
 })
 
 window.addEventListener('resize', () => {
+    const newVisible = getVisible()
+
+    if (newVisible !== VISIBLE) {
+        const logicalIndex = getLogicalIndex()
+        VISIBLE = newVisible
+        CLONED_TOTAL = TOTAL + VISIBLE * 2
+        setupClones()
+        currentIndex = VISIBLE + logicalIndex
+    }
+
     recountSlideWidth()
     goTo(currentIndex, false)
 })
