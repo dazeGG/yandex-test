@@ -11,6 +11,7 @@ const VISIBLE = 3
 
 let currentIndex = 0
 let slideWidth = items[0].offsetWidth + 20
+let autoplayInterval = null
 
 const updateButtons = () => {
     navButtonPrev.disabled = currentIndex <= 0
@@ -24,21 +25,32 @@ const goTo = index => {
     updateButtons()
 }
 
+const goPrev = () => {
+    if (currentIndex > 0) goTo(currentIndex - 1)
+}
+
+const goNext = () => {
+    if (currentIndex < TOTAL - VISIBLE) goTo(currentIndex + 1)
+}
+
 const recountSlideWidth = () => {
     slideWidth = items[0].offsetWidth + 20
 }
 
 const init = () => {
     navTotal.textContent = TOTAL.toString()
+    autoplayInterval = setInterval(goNext, 4000)
     goTo(0)
 }
 
 navButtonPrev.addEventListener('click', () => {
-    if (currentIndex > 0) goTo(currentIndex - 1)
+    goPrev()
+    clearInterval(autoplayInterval)
 })
 
 navButtonNext.addEventListener('click', () => {
-    if (currentIndex < TOTAL - VISIBLE) goTo(currentIndex + 1)
+    goNext()
+    clearInterval(autoplayInterval)
 })
 
 window.addEventListener('resize', () => {
