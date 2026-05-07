@@ -49,7 +49,8 @@ a {
     position: absolute;
     inset: 0;
     background-image: url('../assets/images/hero-texture.webp');
-    background-size: cover;
+    background-size: auto;
+    background-position: center;
     mix-blend-mode: color-burn;
     opacity: 0.6;
     pointer-events: none;
@@ -66,7 +67,8 @@ a {
     position: absolute;
     height: 100%;
     top: 0;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     object-fit: cover;
     z-index: 1;
 }
@@ -84,7 +86,12 @@ a {
 
 .hero__headline--center {
     display: block;
-    text-align: center;
+    margin-left: 104px;
+}
+
+.hero__headline--end {
+    display: block;
+    text-align: end;
 }
 
 .hero__description {
@@ -409,7 +416,6 @@ a {
 .participants__track {
     display: flex;
     column-gap: 20px;
-    transition: transform var(--transition);
 }
 
 .participants__item {
