@@ -388,6 +388,7 @@ a {
 }
 
 .participants__nav-button:disabled {
+    pointer-events: none;
     background-color: #D6D6D6;
 }
 

@@ -12,10 +12,16 @@ const VISIBLE = 3
 let currentIndex = 0
 let slideWidth = items[0].offsetWidth + 20
 
+const updateButtons = () => {
+    navButtonPrev.disabled = currentIndex <= 0
+    navButtonNext.disabled = currentIndex >= TOTAL - VISIBLE
+}
+
 const goTo = index => {
-    track.style.transform = `translateX(-${index * slideWidth}px)`
     currentIndex = index
+    track.style.transform = `translateX(-${index * slideWidth}px)`
     navCurrent.textContent = (VISIBLE + currentIndex).toString()
+    updateButtons()
 }
 
 const recountSlideWidth = () => {
