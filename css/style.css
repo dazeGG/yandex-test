@@ -29,8 +29,9 @@ a {
 }
 
 .container {
-    max-width: 1222px;
+    max-width: 1262px;
     margin: 0 auto;
+    padding-inline: 20px;
 }
 
 .font-serif {
@@ -71,7 +72,7 @@ a {
 .hero__decoration {
     position: absolute;
     height: 100%;
-    top: 0;
+    bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     object-fit: cover;
@@ -80,8 +81,8 @@ a {
 }
 
 .hero__content {
-    max-width: 542px;
     margin-top: 62px;
+    max-width: 542px;
 }
 
 .hero__headline {
@@ -116,7 +117,7 @@ a {
 
 .hero__button {
     height: 72px;
-    padding: 0 49px;
+    padding-inline: 49px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -138,12 +139,12 @@ a {
     color: #1F1F1F;
 }
 
-.hero__button--outline {
+.hero__button--secondary {
     color: var(--color-dark);
     border: 2px solid #1F1F1F;
 }
 
-.hero__button--outline:hover {
+.hero__button--secondary:hover {
     background: #1F1F1F;
     color: var(--color-white);
 }
@@ -465,7 +466,8 @@ a {
 /* FOOTER */
 
 .footer {
-    padding: 40px 0 72px 0;
+    padding-top: 40px;
+    padding-bottom: 72px;
     background-color: #E9DED4;
 }
 

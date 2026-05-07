@@ -2,4 +2,55 @@
     .desktop-only {
         display: none;
     }
+
+    /* HERO */
+
+    .hero__container {
+        padding-top: 18px;
+        height: 774px;
+    }
+
+    .hero__decoration {
+        height: 45.5%;
+        object-position: calc(50% - 150px) center;
+    }
+
+    .hero__logo {
+        width: 213px;
+        height: 32px;
+    }
+
+    .hero__content {
+        margin-top: 40px;
+        max-width: 335px;
+    }
+
+    .hero__headline {
+        font-size: 36px;
+    }
+
+    .hero__headline--center {
+        margin-left: 63px;
+    }
+
+    .hero__description {
+        text-align: left;
+    }
+
+    .hero__buttons {
+        margin-top: 32px;
+        grid-template-columns: 1fr;
+        row-gap: 14px;
+    }
+
+    .hero__button {
+        padding: 0;
+        height: 47px;
+    }
+
+    .hero__button--secondary {
+        border: none;
+        opacity: 0.9;
+        background-color: var(--color-white);
+    }
 }
