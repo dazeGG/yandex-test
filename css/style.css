@@ -134,9 +134,11 @@ a {
     color: var(--color-white);
 }
 
-.hero__button--primary:hover {
-    background: var(--color-yellow);
-    color: #1F1F1F;
+@media (hover: hover) {
+    .hero__button--primary:hover {
+        background: var(--color-yellow);
+        color: #1F1F1F;
+    }
 }
 
 .hero__button--secondary {
@@ -144,9 +146,11 @@ a {
     border: 2px solid #1F1F1F;
 }
 
-.hero__button--secondary:hover {
-    background: #1F1F1F;
-    color: var(--color-white);
+@media (hover: hover) {
+    .hero__button--secondary:hover {
+        background: #1F1F1F;
+        color: var(--color-white);
+    }
 }
 
 /* MARQUEE */
@@ -397,8 +401,10 @@ a {
     transition: background-color var(--transition);
 }
 
-.participants__nav-button:hover {
-    background-color: var(--color-yellow);
+@media (hover: hover) {
+    .participants__nav-button:hover {
+        background-color: var(--color-yellow);
+    }
 }
 
 .participants__nav-button:disabled {
