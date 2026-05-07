@@ -53,4 +53,9 @@
         opacity: 0.9;
         background-color: var(--color-white);
     }
+
+    .marquee {
+        padding: 10px;
+        font-size: 16px;
+    }
 }
