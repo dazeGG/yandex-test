@@ -127,4 +127,16 @@
         margin-top: 40px;
         font-size: 18px;
     }
+
+    /* MARQUEE FOOTER */
+
+    .marquee-footer {
+        margin-top: 100px;
+    }
+
+    /* FOOTER */
+
+    .footer {
+        padding-bottom: 60px;
+    }
 }
