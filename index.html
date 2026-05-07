@@ -162,24 +162,24 @@
                     <h2 class="participants__title font-serif uppercase">Участники турнира</h2>
 
                     <div class="participants__nav">
-                        <button class="participants__nav-button participants__nav-item--left">
+                        <button class="participants__nav-button participants__nav-button--prev">
                             <img src="./assets/icons/arrow-left.svg" alt="arrow-left" />
                         </button>
 
                         <div class="participants__nav-content">
-                            <div class="participants__nav-content-shown">3</div>
+                            <div class="participants__nav-content-current">3</div>
                             <div class="participants__nav-content--muted">/</div>
-                            <div class="participants__nav-content-all participants__nav-content--muted">6</div>
+                            <div class="participants__nav-content-total participants__nav-content--muted">6</div>
                         </div>
 
-                        <button class="participants__nav-button participants__nav-item--right">
+                        <button class="participants__nav-button participants__nav-button--next">
                             <img src="./assets/icons/arrow-right.svg" alt="arrow-right" />
                         </button>
                     </div>
                 </div>
 
                 <div class="participants__viewport">
-                    <div class="participants__items">
+                    <div class="participants__track">
                         <div class="participants__item">
                             <img src="./assets/images/participant-avatar.webp" alt="Participant avatar" class="participants__item-avatar" />
                             <p class="participants__item-name">Хозе-Рауль Капабланка</p>
@@ -242,5 +242,7 @@
             </div>
         </div>
     </main>
+
+    <script src="js/participants-carousel.js"></script>
 </body>
 </html>

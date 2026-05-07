@@ -400,7 +400,7 @@ a {
     overflow: hidden;
 }
 
-.participants__items {
+.participants__track {
     display: flex;
     column-gap: 20px;
     transition: transform var(--transition);
