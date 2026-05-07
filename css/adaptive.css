@@ -1,3 +1,9 @@
+@media (min-width: 769px) {
+    .mobile-only {
+        display: none;
+    }
+}
+
 @media (max-width: 768px) {
     .desktop-only {
         display: none;
@@ -54,8 +60,71 @@
         background-color: var(--color-white);
     }
 
+    /* MARQUEE */
+
     .marquee {
         padding: 10px;
         font-size: 16px;
+    }
+
+    /* EVENTS */
+
+    .events {
+        margin-top: 48px;
+    }
+
+    .events__lecture {
+        display: block;
+    }
+
+    .events__title {
+        font-size: 28px;
+    }
+
+    .events__lecture-photo {
+        margin-block: 24px;
+    }
+
+    .events__seance {
+        margin-top: 21px;
+        display: block;
+    }
+
+    .events__seance-collage-container {
+        margin: 0 -20px;
+    }
+
+    .events__seance-collage {
+        width: 420px;
+    }
+
+    .events__seance-content {
+        margin-top: 24px;
+    }
+
+    .events__seance-details {
+        margin-top: 44px;
+        display: block;
+    }
+
+    .events__seance-details dt {
+        padding: 0;
+        border: none;
+    }
+
+    .events__seance-details dd {
+        margin-top: 12px;
+        margin-bottom: 15px;
+        padding: 0 0 15px;
+        border-left: none;
+    }
+
+    .events__seance-details dd:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .events__seance-contact {
+        margin-top: 40px;
+        font-size: 18px;
     }
 }
