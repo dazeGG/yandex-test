@@ -48,6 +48,7 @@ a {
 .hero {
     position: relative;
     background-color: #E9DED4;
+    overflow: hidden;
 }
 
 .hero::before {
@@ -72,8 +73,8 @@ a {
 
 .hero__decoration {
     position: absolute;
-    height: 100%;
-    bottom: 0;
+    height: 122%;
+    bottom: -7%;
     left: 50%;
     transform: translateX(-50%);
     object-fit: cover;

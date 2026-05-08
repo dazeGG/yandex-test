@@ -59,8 +59,8 @@
     }
 
     .hero__decoration {
-        height: 45.5%;
-        object-position: calc(50% - 150px) center;
+        height: 54%;
+        bottom: -3%;
     }
 
     .hero__logo {
