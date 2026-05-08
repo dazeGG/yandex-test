@@ -1,5 +1,6 @@
 :root {
     --transition: 100ms ease-in-out;
+    --carousel-transition: 250ms ease-in-out;
 
     --color-white: #FFFFFF;
     --color-dark: #313131;
@@ -281,6 +282,10 @@ a {
     margin-top: 200px;
 }
 
+.stages__container {
+    position: relative;
+}
+
 .stages__header {
     position: relative;
     max-width: 806px;
@@ -298,9 +303,12 @@ a {
     bottom: 10px;
 }
 
+.stages__viewport {
+    margin-top: 54px;
+}
+
 .stages__items {
     position: relative;
-    margin-top: 54px;
     display: grid;
     grid-template: 1fr 1fr auto / 1fr 1fr 1fr;
     gap: 20px;
@@ -310,6 +318,7 @@ a {
     position: absolute;
     right: -62px;
     bottom: 0;
+    z-index: 1;
 }
 
 .stages__item {
@@ -344,13 +353,21 @@ a {
     pointer-events: none;
 }
 
-.stages__item:nth-child(3) {
+.stages__item--span-rows {
     grid-row: span 2;
 }
 
-.stages__item:nth-child(7) {
+.stages__item--span-cols {
     grid-column: span 2;
     padding-right: 290px;
+}
+
+.stages__slide {
+    display: contents;
+}
+
+.stages__nav {
+    display: none;
 }
 
 .stages__item-number {

@@ -97,63 +97,93 @@
         </div>
 
         <div id="stages" class="stages">
-            <div class="container">
+            <div class="stages__container container">
                 <div class="stages__header">
                     <h2 class="stages__title font-serif uppercase">Этапы преображения Васюков</h2>
                     <a href="#" class="stages__link">Будущие источники обогащения васюкинцев</a>
                 </div>
 
-                <div class="stages__items">
-                    <div class="stages__item">
-                        <div class="stages__item-number">1</div>
-                        <p class="stages__item-text">
-                            Строительство железнодорожной магистрали Москва-Васюки
-                        </p>
+                <img src="assets/images/plane.webp" alt="Plane" class="stages__plane" />
+
+                <div class="stages__viewport">
+                    <div class="stages__items">
+                        <div class="stages__slide">
+                            <div class="stages__item">
+                                <div class="stages__item-number">1</div>
+                                <p class="stages__item-text">
+                                    Строительство железнодорожной магистрали Москва-Васюки
+                                </p>
+                            </div>
+
+                            <div class="stages__item">
+                                <div class="stages__item-number">2</div>
+                                <p class="stages__item-text">
+                                    Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="stages__slide">
+                            <div class="stages__item stages__item--span-rows">
+                                <div class="stages__item-number">3</div>
+                                <p class="stages__item-text">
+                                    Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="stages__slide">
+                            <div class="stages__item">
+                                <div class="stages__item-number">4</div>
+                                <p class="stages__item-text">
+                                    Строительство дворца для турнира
+                                </p>
+                            </div>
+
+                            <div class="stages__item">
+                                <div class="stages__item-number">5</div>
+                                <p class="stages__item-text">
+                                    Размещение гаражей для гостевого автотранспорта
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="stages__slide">
+                            <div class="stages__item">
+                                <div class="stages__item-number">6</div>
+                                <p class="stages__item-text">
+                                    Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="stages__slide">
+                            <div class="stages__item stages__item--span-cols">
+                                <div class="stages__item-number">7</div>
+                                <p class="stages__item-text">
+                                    Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stages__nav">
+                    <button class="stages__nav-button stages__nav-button--prev">
+                        <img src="assets/icons/arrow-left.svg" alt="arrow-left" />
+                    </button>
+
+                    <div class="stages__nav-dots">
+                        <span class="stages__nav-dot"></span>
+                        <span class="stages__nav-dot"></span>
+                        <span class="stages__nav-dot"></span>
+                        <span class="stages__nav-dot"></span>
+                        <span class="stages__nav-dot"></span>
                     </div>
 
-                    <div class="stages__item">
-                        <div class="stages__item-number">2</div>
-                        <p class="stages__item-text">
-                            Открытие фешенебельной гостиницы «Проходная пешка» и других небоскрёбов
-                        </p>
-                    </div>
-
-                    <div class="stages__item">
-                        <div class="stages__item-number">3</div>
-                        <p class="stages__item-text">
-                            Поднятие сельского хозяйства в радиусе на тысячу километров: производство овощей, фруктов, икры, шоколадных конфет
-                        </p>
-                    </div>
-
-                    <div class="stages__item">
-                        <div class="stages__item-number">4</div>
-                        <p class="stages__item-text">
-                            Строительство дворца для турнира
-                        </p>
-                    </div>
-
-                    <div class="stages__item">
-                        <div class="stages__item-number">5</div>
-                        <p class="stages__item-text">
-                            Размещение гаражей для гостевого автотранспорта
-                        </p>
-                    </div>
-
-                    <div class="stages__item">
-                        <div class="stages__item-number">6</div>
-                        <p class="stages__item-text">
-                            Постройка сверхмощной радиостанции для передачи всему миру сенсационных результатов
-                        </p>
-                    </div>
-
-                    <div class="stages__item">
-                        <div class="stages__item-number">7</div>
-                        <p class="stages__item-text">
-                            Создание аэропорта «Большие Васюки» с регулярным отправлением почтовых самолётов и дирижаблей во все концы света, включая Лос-Анжелос и Мельбурн
-                        </p>
-                    </div>
-
-                    <img src="assets/images/plane.webp" alt="Plane" class="stages__plane" />
+                    <button class="stages__nav-button stages__nav-button--next">
+                        <img src="assets/icons/arrow-right.svg" alt="arrow-right" />
+                    </button>
                 </div>
             </div>
         </div>
@@ -246,5 +276,6 @@
     </main>
 
     <script src="js/participants-carousel.js"></script>
+    <script src="js/stages-carousel.js"></script>
 </body>
 </html>
