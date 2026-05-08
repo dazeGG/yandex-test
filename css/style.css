@@ -320,7 +320,7 @@ a {
 
 .stages__plane {
     position: absolute;
-    right: -62px;
+    right: -42px;
     bottom: 0;
     z-index: 1;
 }
