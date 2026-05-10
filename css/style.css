@@ -308,6 +308,10 @@ a {
     bottom: 10px;
 }
 
+.stages__viewport-container {
+    position: relative;
+}
+
 .stages__viewport {
     margin-top: 54px;
 }
@@ -321,8 +325,8 @@ a {
 
 .stages__plane {
     position: absolute;
-    right: -42px;
-    bottom: 0;
+    right: -63px;
+    bottom: -4px;
     z-index: 1;
 }
 

@@ -77,6 +77,23 @@
     .events__title {
         font-size: 28px;
     }
+
+    /* STAGES */
+
+    .stages__plane {
+        display: none;
+    }
+
+    .stages__items {
+        grid-template: auto / 1fr 1fr;
+    }
+
+    .stages__item--span-rows,
+    .stages__item--span-cols {
+        padding-right: 20px;
+        grid-row: auto;
+        grid-column: auto;
+    }
 }
 
 @media (max-width: 960px) {
@@ -261,10 +278,12 @@
     }
 
     .stages__plane {
-        top: 180px;
+        display: block;
+        width: 345px;
+        top: -135px;
         bottom: unset;
-        left: 8px;
-        scale: 0.9;
+        left: 50%;
+        transform: translateX(-47.5%);
         rotate: -3deg;
     }
 
