@@ -513,7 +513,8 @@ a {
     column-gap: 1px;
 }
 
-.participants__nav-content--muted {
+.participants__nav-content-separator,
+.participants__nav-content-total {
     opacity: 0.6;
 }
 
