@@ -1,11 +1,18 @@
 :root {
     --transition: 100ms ease-in-out;
     --carousel-transition: 250ms ease-in-out;
+    --reveal-transition: 600ms ease-out;
 
     --color-white: #FFFFFF;
     --color-dark: #313131;
+    --color-grey: #D9D9D9;
+    --color-red: #F54932;
     --color-blue: #3057A2;
     --color-yellow: #FBCE51;
+    --color-cream: #E9DED4;
+
+    --color-button-bg: #1F1F1F;
+    --color-divider: #D0D0D0;
 }
 
 html {
@@ -60,7 +67,7 @@ a {
 .hero__headline,
 .hero__description,
 .hero__buttons {
-    animation: hero-entrance 600ms ease-out backwards;
+    animation: hero-entrance var(--reveal-transition) backwards;
 }
 
 .hero__logo {
@@ -81,7 +88,7 @@ a {
 
 .hero {
     position: relative;
-    background-color: #E9DED4;
+    background-color: var(--color-cream);
     overflow: hidden;
 }
 
@@ -166,25 +173,25 @@ a {
 }
 
 .hero__button--primary {
-    background: #1F1F1F;
+    background: var(--color-button-bg);
     color: var(--color-white);
 }
 
 @media (hover: hover) {
     .hero__button--primary:hover {
         background: var(--color-yellow);
-        color: #1F1F1F;
+        color: var(--color-button-bg);
     }
 }
 
 .hero__button--secondary {
     color: var(--color-dark);
-    border: 2px solid #1F1F1F;
+    border: 2px solid var(--color-button-bg);
 }
 
 @media (hover: hover) {
     .hero__button--secondary:hover {
-        background: #1F1F1F;
+        background: var(--color-button-bg);
         color: var(--color-white);
     }
 }
@@ -206,7 +213,7 @@ a {
     font-size: 22px;
     line-height: 1.1;
     overflow: hidden;
-    background-color: #F54932;
+    background-color: var(--color-red);
     color: var(--color-white);
 }
 
@@ -221,7 +228,7 @@ a {
 .reveal {
     opacity: 0;
     transform: translateY(40px);
-    transition: opacity 600ms ease-out, transform 600ms ease-out;
+    transition: opacity var(--reveal-transition), transform var(--reveal-transition);
 }
 
 .reveal.is-visible {
@@ -249,7 +256,7 @@ a {
 
 .events__title--red {
     font-weight: 700;
-    color: #F54932;
+    color: var(--color-red);
 }
 
 .events__title .events__lecture-photo {
@@ -285,14 +292,14 @@ a {
 .events__seance-details dt {
     opacity: 0.7;
     padding: 15px 15px 15px 0;
-    border-bottom: 2px solid #D0D0D0;
+    border-bottom: 2px solid var(--color-divider);
 }
 
 .events__seance-details dd {
     font-weight: 600;
     padding: 15px 0 15px 15px;
-    border-bottom: 2px solid #D0D0D0;
-    border-left: 2px solid #D0D0D0;
+    border-bottom: 2px solid var(--color-divider);
+    border-left: 2px solid var(--color-divider);
 }
 
 .events__seance-details-row:first-child > dt,
@@ -323,7 +330,7 @@ a {
     right: 0;
     top: 50%;
     height: 2px;
-    background: #F54932;
+    background: var(--color-red);
     border-radius: 66px;
 }
 
@@ -402,6 +409,17 @@ a {
     50% {
         translate: 0 -10px;
         rotate: -2deg;
+    }
+}
+
+@keyframes plane-float-mobile {
+    0%, 100% {
+        translate: -47.5% 0;
+        rotate: -3deg;
+    }
+    50% {
+        translate: -47.5% -8px;
+        rotate: -5deg;
     }
 }
 
@@ -579,7 +597,7 @@ a {
 .footer {
     padding-top: 40px;
     padding-bottom: 72px;
-    background-color: #E9DED4;
+    background-color: var(--color-cream);
 }
 
 .footer__text {

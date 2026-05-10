@@ -287,17 +287,6 @@
         animation: plane-float-mobile 4s ease-in-out infinite;
     }
 
-    @keyframes plane-float-mobile {
-        0%, 100% {
-            translate: -47.5% 0;
-            rotate: -3deg;
-        }
-        50% {
-            translate: -47.5% -8px;
-            rotate: -5deg;
-        }
-    }
-
     .stages__slide {
         display: flex;
         flex-direction: column;
@@ -366,7 +355,7 @@
         width: 10px;
         height: 10px;
         border-radius: 50%;
-        background-color: #D9D9D9;
+        background-color: var(--color-grey);
         transition: background-color var(--carousel-transition);
     }
 
