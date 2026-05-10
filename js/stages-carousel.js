@@ -31,3 +31,12 @@ stagesNext.addEventListener('click', () => {
 })
 
 stagesUpdate()
+
+const mobileQuery = window.matchMedia('(max-width: 768px)')
+
+mobileQuery.addEventListener('change', (e) => {
+    if (!e.matches) {
+        stagesIndex = 0
+        stagesUpdate()
+    }
+})
