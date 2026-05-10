@@ -298,6 +298,12 @@ a {
     display: block;
 }
 
+@media (hover: hover) {
+    .events__seance-contact:hover {
+        text-decoration: underline;
+    }
+}
+
 /* STAGES */
 
 .stages {
@@ -323,6 +329,12 @@ a {
     max-width: 280px;
     right: 225px;
     bottom: 10px;
+}
+
+@media (hover: hover) {
+    .stages__link:hover {
+        text-decoration: underline;
+    }
 }
 
 .stages__viewport-container {
