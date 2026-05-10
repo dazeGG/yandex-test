@@ -10,18 +10,18 @@ const PARTICIPANTS_TOTAL = participantsItems.length
 
 const getVisible = () => window.matchMedia('(max-width: 768px)').matches ? 1 : 3
 
-let VISIBLE = getVisible()
-let CLONED_TOTAL = PARTICIPANTS_TOTAL + VISIBLE * 2
+let visibleCount = getVisible()
+let clonedTotal = PARTICIPANTS_TOTAL + visibleCount * 2
 
-let participantsIndex = VISIBLE
+let participantsIndex = visibleCount
 let slideWidth = participantsItems[0].offsetWidth + 20
 let autoplayInterval = null
 let isTransitioning = false
 
-const getLogicalIndex = () => ((participantsIndex - VISIBLE) % PARTICIPANTS_TOTAL + PARTICIPANTS_TOTAL) % PARTICIPANTS_TOTAL
+const getLogicalIndex = () => ((participantsIndex - visibleCount) % PARTICIPANTS_TOTAL + PARTICIPANTS_TOTAL) % PARTICIPANTS_TOTAL
 
 const updateCounter = () => {
-    participantsCurrent.textContent = ((getLogicalIndex() + VISIBLE - 1) % PARTICIPANTS_TOTAL + 1).toString()
+    participantsCurrent.textContent = ((getLogicalIndex() + visibleCount - 1) % PARTICIPANTS_TOTAL + 1).toString()
 }
 
 const goTo = (index, animated = true) => {
@@ -33,7 +33,7 @@ const goTo = (index, animated = true) => {
 
 participantsTrack.addEventListener('transitionend', () => {
     // Если ушли в клоны слева — прыгаем на оригиналы справа
-    if (participantsIndex <= VISIBLE - 1) {
+    if (participantsIndex <= visibleCount - 1) {
         participantsTrack.style.transition = 'none'
         participantsIndex += PARTICIPANTS_TOTAL
         participantsTrack.style.transform = `translateX(-${participantsIndex * slideWidth}px)`
@@ -42,7 +42,7 @@ participantsTrack.addEventListener('transitionend', () => {
     }
 
     // Если ушли в клоны справа — прыгаем на оригиналы слева
-    if (participantsIndex >= CLONED_TOTAL - VISIBLE) {
+    if (participantsIndex >= clonedTotal - visibleCount) {
         participantsTrack.style.transition = 'none'
         participantsIndex -= PARTICIPANTS_TOTAL
         participantsTrack.style.transform = `translateX(-${participantsIndex * slideWidth}px)`
@@ -77,8 +77,8 @@ const setupClones = () => {
         if (!originals.has(child)) child.remove()
     })
 
-    const firstItems = [...participantsItems].slice(0, VISIBLE)
-    const lastItems = [...participantsItems].slice(PARTICIPANTS_TOTAL - VISIBLE)
+    const firstItems = [...participantsItems].slice(0, visibleCount)
+    const lastItems = [...participantsItems].slice(PARTICIPANTS_TOTAL - visibleCount)
 
     lastItems.forEach(item => participantsTrack.insertBefore(item.cloneNode(true), participantsTrack.firstChild))
     firstItems.forEach(item => participantsTrack.appendChild(item.cloneNode(true)))
@@ -104,12 +104,12 @@ participantsNext.addEventListener('click', () => {
 window.addEventListener('resize', () => {
     const newVisible = getVisible()
 
-    if (newVisible !== VISIBLE) {
+    if (newVisible !== visibleCount) {
         const logicalIndex = getLogicalIndex()
-        VISIBLE = newVisible
-        CLONED_TOTAL = PARTICIPANTS_TOTAL + VISIBLE * 2
+        visibleCount = newVisible
+        clonedTotal = PARTICIPANTS_TOTAL + visibleCount * 2
         setupClones()
-        participantsIndex = VISIBLE + logicalIndex
+        participantsIndex = visibleCount + logicalIndex
     }
 
     recountSlideWidth()
