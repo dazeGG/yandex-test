@@ -508,11 +508,6 @@ a {
     }
 }
 
-.participants__nav-button:disabled {
-    pointer-events: none;
-    background-color: #D6D6D6;
-}
-
 .participants__nav-content {
     display: flex;
     column-gap: 1px;
