@@ -37,7 +37,7 @@ participantsTrack.addEventListener('transitionend', () => {
         participantsTrack.style.transition = 'none'
         participantsIndex += PARTICIPANTS_TOTAL
         participantsTrack.style.transform = `translateX(-${participantsIndex * slideWidth}px)`
-        participantsTrack.offsetHeight
+        participantsTrack.offsetHeight // force reflow
         updateCounter()
     }
 
@@ -46,7 +46,7 @@ participantsTrack.addEventListener('transitionend', () => {
         participantsTrack.style.transition = 'none'
         participantsIndex -= PARTICIPANTS_TOTAL
         participantsTrack.style.transform = `translateX(-${participantsIndex * slideWidth}px)`
-        participantsTrack.offsetHeight
+        participantsTrack.offsetHeight // force reflow
         updateCounter()
     }
 
