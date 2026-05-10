@@ -7,6 +7,16 @@
 }
 
 @media (max-width: 1280px) {
+    /* HERO */
+
+    .hero__content {
+        max-width: 500px;
+    }
+
+    .hero__headline {
+        font-size: 54px;
+    }
+
     /* EVENTS */
 
     .events__title {
@@ -24,9 +34,40 @@
     .events__seance-contact {
         margin-top: 32px;
     }
+
+    .hero__button {
+        padding-inline: 36px;
+    }
 }
 
 @media (max-width: 1024px) {
+    /* HERO */
+
+    .hero__container {
+        height: 600px;
+    }
+
+    .hero__content {
+        max-width: 460px;
+    }
+
+    .hero__headline {
+        font-size: 48px;
+    }
+
+    .hero__headline--center {
+        margin-left: 96px;
+    }
+
+    .hero__buttons {
+        margin-top: 28px;
+    }
+
+    .hero__button {
+        padding-inline: 36px;
+        height: 64px;
+    }
+
     /* EVENTS */
 
     .events__seance {
@@ -39,6 +80,28 @@
 }
 
 @media (max-width: 960px) {
+    /* HERO */
+
+    .hero__container {
+        height: 650px;
+    }
+
+    .hero__decoration {
+        height: 100%;
+        object-position: calc(50% + 100px) center;
+    }
+
+    .hero__buttons {
+        margin-top: 32px;
+        grid-template-columns: 1fr;
+        row-gap: 14px;
+    }
+
+    .hero__button {
+        padding: 0;
+        height: 47px;
+    }
+
     /* EVENTS */
 
     .events__seance-details {
@@ -59,42 +122,34 @@
     }
 
     .hero__decoration {
-        height: 54%;
+        height: 58%;
         bottom: -3%;
+        object-position: calc(50%) center;
     }
 
-    .hero__logo {
-        width: 213px;
-        height: 32px;
-    }
+    /*.hero__logo {*/
+    /*    width: 213px;*/
+    /*    height: 32px;*/
+    /*}*/
 
     .hero__content {
         margin-top: 40px;
-        max-width: 335px;
+        max-width: unset;
     }
 
     .hero__headline {
-        font-size: 36px;
+        font-size: 54px;
+        text-align: center;
     }
 
-    .hero__headline--center {
-        margin-left: 63px;
+    .hero__headline--center,
+    .hero__headline--end {
+        display: contents;
     }
 
-    .hero__description {
-        text-align: left;
-    }
-
-    .hero__buttons {
-        margin-top: 32px;
-        grid-template-columns: 1fr;
-        row-gap: 14px;
-    }
-
-    .hero__button {
-        padding: 0;
-        height: 47px;
-    }
+    /*.hero__description {*/
+    /*    text-align: left;*/
+    /*}*/
 
     .hero__button--secondary {
         border: none;
@@ -133,7 +188,8 @@
     }
 
     .events__seance-collage {
-        width: 420px;
+        width: 100vw;
+        max-width: 450px;
         margin: 0 auto;
     }
 
@@ -356,5 +412,32 @@
 
     .footer {
         padding-bottom: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* HERO */
+
+    .hero__decoration {
+        height: 54%;
+        object-position: calc(86%) center;
+    }
+
+    .hero__headline {
+        font-size: 36px;
+        text-align: left;
+    }
+
+    .hero__headline--center,
+    .hero__headline--end {
+        display: block;
+    }
+
+    .hero__headline--center {
+        margin-left: 63px;
+    }
+
+    .hero__description {
+        text-align: left;
     }
 }
