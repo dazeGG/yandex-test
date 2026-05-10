@@ -127,10 +127,10 @@
         object-position: calc(50%) center;
     }
 
-    /*.hero__logo {*/
-    /*    width: 213px;*/
-    /*    height: 32px;*/
-    /*}*/
+    .hero__logo {
+        width: 213px;
+        height: 32px;
+    }
 
     .hero__content {
         margin-top: 40px;
@@ -146,10 +146,6 @@
     .hero__headline--end {
         display: contents;
     }
-
-    /*.hero__description {*/
-    /*    text-align: left;*/
-    /*}*/
 
     .hero__button--secondary {
         border: none;
