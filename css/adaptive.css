@@ -1,11 +1,3 @@
-/* TODO Убрать .mobile-only и .desktop-only */
-
-@media (min-width: 769px) {
-    .mobile-only {
-        display: none;
-    }
-}
-
 @media (max-width: 1280px) {
     /* HERO */
 
@@ -124,13 +116,18 @@
     .events__seance-details {
         grid-template-columns: 1fr auto;
     }
+
+    /* STAGES */
+
+    .stages__link {
+        position: unset;
+        max-width: unset;
+        display: block;
+        margin-top: 12px;
+    }
 }
 
 @media (max-width: 768px) {
-    .desktop-only {
-        display: none;
-    }
-
     /* HERO */
 
     .hero__container {
@@ -186,7 +183,12 @@
         display: block;
     }
 
-    .events__lecture-photo {
+    .events__lecture > .events__lecture-photo {
+        display: none;
+    }
+
+    .events__title .events__lecture-photo {
+        display: block;
         margin: 24px auto;
     }
 
@@ -249,8 +251,7 @@
         margin-top: 120px;
     }
 
-    .stages__header,
-    .stages__link {
+    .stages__header {
         position: unset;
         max-width: unset;
     }
@@ -261,8 +262,6 @@
     }
 
     .stages__link {
-        display: block;
-        margin-top: 12px;
         font-size: 18px;
     }
 

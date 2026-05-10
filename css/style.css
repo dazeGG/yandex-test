@@ -205,6 +205,10 @@ a {
     color: #F54932;
 }
 
+.events__title .events__lecture-photo {
+    display: none;
+}
+
 .events__seance {
     margin-top: 64px;
     display: flex;
