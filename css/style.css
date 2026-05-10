@@ -45,6 +45,40 @@ a {
 
 /* HERO */
 
+@keyframes hero-entrance {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero__logo,
+.hero__headline,
+.hero__description,
+.hero__buttons {
+    animation: hero-entrance 600ms ease-out backwards;
+}
+
+.hero__logo {
+    animation-delay: 100ms;
+}
+
+.hero__headline {
+    animation-delay: 250ms;
+}
+
+.hero__description {
+    animation-delay: 400ms;
+}
+
+.hero__buttons {
+    animation-delay: 550ms;
+}
+
 .hero {
     position: relative;
     background-color: #E9DED4;
