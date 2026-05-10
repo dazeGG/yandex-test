@@ -67,7 +67,7 @@ a {
 .hero__container {
     position: relative;
     padding-top: 26px;
-    height: 700px;
+    min-height: 700px;
     z-index: 3;
 }
 
