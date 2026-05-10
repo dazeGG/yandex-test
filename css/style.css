@@ -332,6 +332,18 @@ a {
     right: -63px;
     bottom: -4px;
     z-index: 1;
+    animation: plane-float 4s ease-in-out infinite;
+}
+
+@keyframes plane-float {
+    0%, 100% {
+        translate: 0 0;
+        rotate: 0deg;
+    }
+    50% {
+        translate: 0 -10px;
+        rotate: -2deg;
+    }
 }
 
 .stages__item {

@@ -282,8 +282,20 @@
         top: -135px;
         bottom: unset;
         left: 50%;
-        transform: translateX(-47.5%);
+        translate: -47.5% 0;
         rotate: -3deg;
+        animation: plane-float-mobile 4s ease-in-out infinite;
+    }
+
+    @keyframes plane-float-mobile {
+        0%, 100% {
+            translate: -47.5% 0;
+            rotate: -3deg;
+        }
+        50% {
+            translate: -47.5% -8px;
+            rotate: -5deg;
+        }
     }
 
     .stages__slide {
